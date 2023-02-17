@@ -1,0 +1,37 @@
+    /* Styles for the Tic Tac Toe board */
+    #board {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        height: 300px;
+        width: 300px;
+        background-color: rgb(199, 9, 9);
+      }
+      .cell {
+        border: 1px solid yellow;
+        font-size: 100px;
+        text-align: center;
+        background-color: green;
+      }
+      .cell:not(:empty)::before {
+    content: attr(data-content);
+    font-size: 100px;
+    color: purple;
+  }
+  
+  /* Add styles for the winning cells */
+  .cell.win {
+    background-color: black; /* Change the background color of the winning cells */
+  }
+  #buttons button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background color for the buttons */
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  #buttons button:hover {
+    background-color: #3e8e41; /* Change the background color on hover */
+  }
